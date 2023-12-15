@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    display: flex;
+    height: 95vh;
+
+}
+.nva-left{
+    /* background-color: rgb(53, 130, 38); */
+    flex: 1;
+}
+.nva-center{
+    background-color:#D9D9D9;
+    flex: 5;
+}
+.pos-system>h2{
+    padding: 9px;
+    color:orange ;
+}
+.list-product{
+    height: 45vh;
+}
+.lists{
+    padding:16px 0px 0 16px;
+}
+.list1{
+
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+
+}
+.list2{
+
+    margin-top: 10px;
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+
+}
+
+.list1:hover,
+.list2:hover{
+    background-color: #D9D9D9;
+    border-right: 3px solid orange;
+}
+
+.list-personl{
+    margin-top: 10px;
+    height: 40vh;
+
+}
+.sarch{
+    background-color:rgb(251, 156, 132);
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#search-books input[type=text]{
+    width: 100%;
+    border: 1px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 15px;
+}
+input[type=text]{
+    margin-left:70px;
+    padding: 8px;
+
+}
+/* ===============Products================= */
+.products{
+    /* background-color: rgb(137, 205, 29); */
+    height: 85vh;
+
+}
+.Menu-home{
+    padding: 10px;
+    /* background-color: aliceblue; */
+    margin-left: 15px;
+}
+.box-product{
+    /* background-color: pink; */
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    gap: 13px;
+    padding: 0px 50px;
+    flex-wrap: wrap;
+}
+.box{
+    background-color: white;
+    height: 40vh;
+    width: 25vh;
+    border-radius: 10px;
+}
+.pic img{
+    margin: 0 8px;
+    height: 22vh;
+    border-radius: 8px;
+    background-color: aliceblue;
+}
+.price{
+    background-color:#e8760b;
+    padding: 0px 15px;
+    width: 30px;
+    border-radius: 10px 0;
+    color:#fff;
+}
+.box h4{
+    text-align: center;
+}
+.size-all{
+    /* background-color: aquamarine; */
+    display: flex;
+    margin-left: 3px;
+    gap: 3px;
+    padding: 5px;
+}
+.size-all >.border-size{
+    background-color: aliceblue;
+    border: 1px solid ;
+    border-radius: 10px;
+    padding: 2px;
+    width: 10vh;
+    text-align: center;
+}
+.border-cart{
+    color: #FFA16C;
+    display: flex;
+    padding: 3px;
+    margin: 0 5px;
+    border: 1px solid;
+    border-radius: 15px;
+    gap: 10px;
+}
+.border-cart:hover{
+    background-color:#FFA16C;
+    color: #fff;
+
+}
+
+
+
