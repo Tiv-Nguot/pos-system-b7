@@ -1,39 +1,105 @@
-*{
+* {
     margin: 0;
     padding: 0;
-}
-header{
+  }
+  
+  header {
     padding: 30px;
     background: #219ebc;
     justify-items: center;
     align-items: center;
-    font-size: 40px;
-}
-.logo-name{
+  }
+  
+  .logo-name {
     width: 30%;
     background: red;
     display: flex;
     justify-content: space-between;
-}
-.container{
+  }
+  
+  .container {
     height: 700px;
-    background: peru;
     display: flex;
     justify-content: space-between;
-}
-nav{
-    width: 25%;
+  }
+  /* navbar of website */
+  nav {
+    width: 20%;
     background: #b7b7a4;
     display: grid;
     justify-items: center;
     align-items: center;
     font-size: 40px;
-}
-main{
-    width: 75%; 
-    background: #fca311;
-    display: grid;
+  }
+  
+  /* main of website  */
+  main {
+    width: 100%;
+    padding: 20px;
     justify-items: center;
     align-items: center;
-    font-size: 40px;
-}
+  }
+  
+  .sales-summary {
+    justify-content: space-between;
+  }
+  
+  
+  .total-card {
+    /* width: 100%; */
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .total {
+    width: 20%;
+    padding: 2%;
+    border-radius: 3px;
+    text-align: center;
+  }
+  
+  .year-total {
+    background: #023047;
+    color: white;
+  }
+  
+  .month-total {
+    background: #457b9d;
+  }
+  
+  .week-total {
+    background: #9a8c98;
+  }
+  
+  .day-total {
+    background: #e9ecef;
+  }
+  
+  
+  /* table ------------- */
+  table {
+    width: 100%;
+    height: 70px;
+    margin-top: 20px;
+  }
+  
+  table,th,td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th{
+    height: 40px;
+    background: rgba(76, 156, 156, 0.7);
+  }
+  td{
+    padding-left: 20px;
+  }
+  td:nth-child(1){
+    background: orange;
+  }
+  td:nth-last-child(1){
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+  }
