@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="../js/products.js">
     <title>Product manage</title>
 </head>
+
 <body>
     <header>
         <!-- H1 just example. pls delete-->
@@ -16,20 +18,91 @@
             <img src="" alt="Logo do site">
             <h5 class="company_name">Name company</h5>
         </div>
-      </header>
-      
-      <div class="container">
+    </header>
+
+    <div class="container">
         <nav>
-             <!-- H1 just example. pls delete-->
+            <!-- H1 just example. pls delete-->
             <h1>Navbar</h1>
-          <!-- Your navigation content goes here -->
+            <!-- Your navigation content goes here -->
         </nav>
         <main>
-             <!-- H1 just example. pls delete-->
-            <h1>main</h1>
-            <!-- it use to put card or something -->
+            <div class="content">
+                <div class="content-top">
+                    <h3>Title</h3>
+                    <ul>
+                        <li>Drinks:</li>
+                        <li>Cakes:</li>
+                        <li>Snacks:</li>
+                        <li>Deserts:</li>
+                    </ul>
+                    <h3>Total:</h3>
+                </div>
+                <div class="content-buttom">
+                    <div class="product">
+                        <section class="head_item">
+                            <div class="items">
+                                <button>Add Product</button>
+                                <h4>Filter By All Categories:</h4>
+                                <select>
+                                    <option value="drink">All Categories</option>
+                                    <option value="drink">Drinks</option>
+                                    <option value="Cake">Cakes</option>
+                                    <option value="snack">Snacks</option>
+                                    <option value="desert">Deserts</option>
+                                </select>
+                            </div>
+                        </section>
+                        <div class="search">
+                            <input type="text" name="" placeholder="Search Products Name">
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product id</th>
+                                <th>Product name</th>
+                                <th>Categories</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>Broundsuger</td>
+                                <td>Drinks</td>
+                                <td>2</td>
+                                <td>2.00$</td>
+                                <td><img src="../images/icon/edit.svg" id="edit" alt="" > <img src="../images/icon/delete.png"
+                                    id="delete" alt=""> <img src="../images/icon/eye.png" id="show" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Cupcake</td>
+                                <td>Cakes</td>
+                                <td>2</td>
+                                <td>2.50$</td>
+                                <td><img src="../images/icon/edit.svg" id="edit" alt="" > <img src="../images/icon/delete.png"
+                                       id="delete" alt=""> <img src="../images/icon/eye.png" id="show" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Cheese</td>
+                                <td>Snacks</td>
+                                <td>3</td>
+                                <td>3.00$</td>
+                                <td><img src="../images/icon/edit.svg" id="edit" alt="" > <img src="../images/icon/delete.png"
+                                    id="delete" alt=""> <img src="../images/icon/eye.png" id="show" alt=""></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </main>
-      </div>
-      
+    </div>
+
 </body>
+
 </html>
