@@ -1,42 +1,79 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-header{
-    padding: 30px;
-    background: #219ebc;
+  }
+  
+  header {
+    padding: 10px;
+    background: #06181d;
     justify-items: center;
     align-items: center;
-    font-size: 40px;
-}
-.logo-name{
-    width: 30%;
-    background: red;
+  }
+  
+  .logo-name {
+    width: 15%;
+    color: white;
     display: flex;
     justify-content: space-between;
-}
-.container{
+    font-size: 25px;
+    align-items: center;
+  }
+  .logo-name .material-symbols-outlined{
+    font-size: 40px;
+  }
+  .container {
     height: 700px;
+    background: #D9D9D9;
     display: flex;
     justify-content: space-between;
-}
-nav{
-    width: 25%;
+  }
+  
+  /* ----------------------------------------------- navbar of website */
+  .navbar {
+    width: 20%;
     background: #b7b7a4;
-    display: grid;
-    justify-items: center;
+    background: white;
+    border: 1px solid gray;
+    
+  }
+  
+  .nav-list {
+    list-style-type: none;
+  }
+  
+  .nav-item {
+    margin: 10px;
+    padding: 15px;
+    font-size: 20px;
+  }
+  
+  .nav-item:hover {
+    background-color: #D9D9D9;
+    border-right: 3px solid orange;
+  }
+  
+  .nav-item a {
+    width: 70%;
+    color: black;
+    text-decoration: none;
     align-items: center;
-    font-size: 40px;
-}
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  a .material-symbols-outlined{
+    font-size: 35px;
+  }
+  /*  ----------------------------------------------------- end of navbar*/
 main{
     width: 80%;
 }
 .product{
-    margin: 10px auto;
+    width: 80%;
+    margin: 8px auto;
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    
 }
 .content{
     display: flex;
@@ -44,7 +81,7 @@ main{
     width: 100%;
 
 }
-.content-top{
+.card_summaries{
     background-color: white;
     width: 35%;
     border-radius: 4px;
@@ -59,7 +96,7 @@ h3{
 h4{
     margin-top: 10px;
 }
-ul{
+#list_category{
     margin-left: 25px;
     line-height: 30px;
 }
