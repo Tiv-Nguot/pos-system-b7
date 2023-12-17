@@ -1,105 +1,180 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
+  margin: 0;
+  padding: 0;
+}
+/* -------------------------------------------header of website */
+header {
+  padding: 10px;
+  background: #06181d;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo-name {
+  width: 15%;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-name .material-symbols-outlined {
+  font-size: 40px;
+}
+/* -------------------------------------------end of header */
+
+.container {
+  height: 100vh;
+  background: #D9D9D9;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* -----------------------------------------navbar of website */
+nav {
+  width: 20%;
+  background: white;
+  border: 1px solid gray;
+}
+.nav-list {
+  list-style-type: none;
+}
+.nav-item {
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+}
+.nav-item:hover {
+  background-color: #D9D9D9;
+  border-right: 3px solid orange;
+  transition:  0.5s ease;
+}
+.nav-item a {
+  width: 70%;
+  color: black;
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+a .material-symbols-outlined{
+  font-size: 35px;
+}
+/* ---------------------------------------------end of navbar */
+/* main of website  */
+main {
+  width: 100%;
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* ---------------------------------------------------summary of total */
+.sales-summary {
+  justify-content: space-between;
+}
+.selection {
+  text-align: right;
+}
+
+.selection select {
+  padding: 10px;
+  font-size: 16px;
+}
+select:hover{
+  box-shadow: 0px 1px 20px rgb(14, 68, 60);
+  transition:  0.5s ease;
+}
+.total-card {
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.total {
+  width: 20%;
+  padding: 0% 0% 5% 0%;
+  margin-top: 20px;
+  background: #fcf3f3;
+  text-align: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+  0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.total:hover{
+  box-shadow: 0px 1px 20px rgb(68, 14, 48);
+  transition:  0.5s ease;
+  cursor: pointer;
+}
+#year{
+  padding: 5px;
+  background: #0F1A2E;
+  color: white;
+  font-size: 21px;
+}
+#month{
+  padding: 5px;
+  background: #103b2e;
+  color: white;
+  font-size: 21px;
   
-  header {
-    padding: 30px;
-    background: #219ebc;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .logo-name {
-    width: 30%;
-    background: red;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .container {
-    height: 700px;
-    display: flex;
-    justify-content: space-between;
-  }
-  /* navbar of website */
-  nav {
-    width: 20%;
-    background: #b7b7a4;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    font-size: 40px;
-  }
-  
-  /* main of website  */
-  main {
-    width: 100%;
-    padding: 20px;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .sales-summary {
-    justify-content: space-between;
-  }
-  
-  
-  .total-card {
-    /* width: 100%; */
-    padding: 2%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .total {
-    width: 20%;
-    padding: 2%;
-    border-radius: 3px;
-    text-align: center;
-  }
-  
-  .year-total {
-    background: #023047;
-    color: white;
-  }
-  
-  .month-total {
-    background: #457b9d;
-  }
-  
-  .week-total {
-    background: #9a8c98;
-  }
-  
-  .day-total {
-    background: #e9ecef;
-  }
-  
-  
-  /* table ------------- */
-  table {
-    width: 100%;
-    height: 70px;
-    margin-top: 20px;
-  }
-  
-  table,th,td {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  th{
-    height: 40px;
-    background: rgba(76, 156, 156, 0.7);
-  }
-  td{
-    padding-left: 20px;
-  }
-  td:nth-child(1){
-    background: orange;
-  }
-  td:nth-last-child(1){
-    color: red;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
-  }
+}
+#week{
+  padding: 5px;
+  background: #320433;
+  color: white;
+  font-size: 21px;
+}
+#day{
+  padding: 5px;
+  background: #62024d;
+  color: white;
+  font-size: 21px;
+}
+
+.total-price{
+  margin-top: 20px;
+  color: #E73939;
+  font-size: 2em;
+}
+/* --------------------------------------end of summary total */
+
+/*  ------------------------------------------table */
+.table-story{
+  margin-top: 20px;
+}
+table {
+  width: 100%;
+  height: 70px;
+  margin-top: 20px;
+}
+
+table,
+th,
+td {
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  border-collapse: collapse;
+}
+
+th {
+  height: 40px;
+  background: rgba(2, 5, 5, 0.7);
+  color: white;
+}
+
+td {
+  padding: 4px;
+  background: white;
+}
+
+td:nth-child(1) {
+  background: orange;
+}
+
+td:nth-last-child(1) {
+  color: #E73939;
+  font-weight: bold;
+  font-size: 20px;
+}
+/* ------------------------------end of table */

@@ -5,45 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/story_solds.css">
     <script src="../js/story_solds.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Story</title>
 </head>
 <body>
     <header>
-        <!-- H1 just example. pls delete-->
-        <h1>Header</h1>
-        <!-- put the logo and name company -->
         <div class="logo-name">
-            <img src="" alt="Logo do site">
-            <h5 class="company_name">Name company</h5>
+          <span class="material-symbols-outlined">shopping_cart</span>
+            <h5 class="company_name">POS SYSTEM</h5>
         </div>
       </header>
       
       <div class="container">
-        <nav>
-             <!-- H1 just example. pls delete-->
-            <h1>Navbar</h1>
-          <!-- Your navigation content goes here -->
+        <!-- --------------------------------------------------------------------navbar -->
+        <nav class="navbar">
+          <ul class="nav-list">
+            <li class="nav-item"><a href="index.html"><span class="material-symbols-outlined">house</span> Home</a></li>
+            <li class="nav-item"><a href="products.html"><span class="material-symbols-outlined">order_approve</span> Product</a></li>
+            <li class="nav-item"><a href="#"><span class="material-symbols-outlined">history</span> Story</a></li>
+          </ul>
         </nav>
         <main>
           <!-- summary all total sold -------------------------------------->
           <div class="sales-summary">
-            <h2>Sales summary:</h2>
+            <h1 class="title">Sales summary</h1>
             <div class=" total-card">
               <div class="total year-total">
-                <h3>Year</h3>
-                <p id="yearlyTotal">660$</p>
+                <h3 id="year">Year</h3>
+                <p class="total-price">660$</p>
               </div>
               <div class="total month-total">
-                <h3>Month</h3>
-                <p id="monthlyTotal">470$</p>
+                <h3 id="month">Month</h3>
+                <p class="total-price">470$</p>
               </div>
               <div class="total week-total">
-                <h3>Week</h3>
-                <p id="weeklyTotal">300$</p>
+                <h3 id="week">Week</h3>
+                <p class="total-price">300$</p>
               </div> 
               <div class="total day-total">
-                <h3>Day</h3>
-                <p id="dailyTotal">150$</p>
+                <h3 id="day">Today</h3>
+                <p class="total-price">150$</p>
               </div>
             </div>
           </div>
@@ -51,16 +52,26 @@
 
           <!-- table story sold ------------------------------------- -->
           <div class="table-story">
-            <h2>Stories sold by date:</h2>
+            <h1 class="title">Products story</h1>
+            <div class="selection">
+              <select>
+                <option value="today">Today</option>
+                <option value="yesterday">Yesterday</option>
+                <option value="last-week">Last Week</option>
+                <option value="last-month">Last Month</option>
+                <option value="last-year">Last Year</option>
+              </select>
+            </div>
+            <!-- ----------------------------------------------------------------table -->
             <table>
               <thead>
                   <tr>
                       <th>Id</th>
                       <th>Product</th>
                       <th>Category</th>
-                      <th>Quantity</th>
-                      <th>Discount</th>
-                      <th>Unique price</th>
+                      <th>quantity</th>
+                      <th>Date</th>
+                      <th>Price</th>
                   </tr>
               </thead>
               <tbody>
@@ -69,7 +80,7 @@
                       <td>Coffee</td>
                       <td>Drink</td>
                       <td>1</td>
-                      <td>0%</td>
+                      <td>12 Nv 2023</td>
                       <td>5$</td>
                   </tr>
                   <tr>
@@ -77,15 +88,22 @@
                       <td>Coffee</td>
                       <td>Drink</td>
                       <td>1</td>
-                      <td>0%</td>
-                      <td>5$</td>
+                      <td>12 Nv 2023</td>
+                      <td>15$</td>
+                  </tr>
+                  <tr>
+                      <td>000</td>
+                      <td>Coffee</td>
+                      <td>Drink</td>
+                      <td>1</td>
+                      <td>12 Nv 2023</td>
+                      <td>15$</td>
                   </tr>
               </tbody>
           </table>
-          <!-- ---------------------------------------------------------- -->
+          <!-- ---------------------------------------------------------- end of table-->
           </div>
         </main>
-      </div>
-      
+      </div> 
 </body>
 </html>
