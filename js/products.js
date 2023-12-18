@@ -1,3 +1,4 @@
+// ------------------------------------------------------------------------------------------add feature
 let id_product = 1;
 
 // Show form for adding a product
@@ -5,6 +6,10 @@ function toggleForm() {
     document.querySelector('.form-add-product').style.display = 'block';
 }
 
+// Hide the form for adding a product
+function close_form() {
+    document.querySelector('.form-add-product').style.display = 'none';
+}
 // Hide the form for adding a product
 function hideForm() {
     document.querySelector('.form-add-product').style.display = 'none';
@@ -79,3 +84,5 @@ window.addEventListener('load', function () {
         addToTable(productData);
     }
 });
+
+// ----------------------------------------------------------------------------------------------------
