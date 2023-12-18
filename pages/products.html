@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../css/products.css">
-    <link rel="stylesheet" href="../js/products.js">
     <title>Manage Product </title>
 </head>
 <body>
@@ -15,7 +14,7 @@
             <span class="material-symbols-outlined">
                 shopping_cart
                 </span>
-                <h5 class="company_name">POS SYSTEM B7</h5>
+                <h5 class="company_name">POS SYSTEM </h5>
         </div>
       </header>
       
@@ -41,9 +40,43 @@
                 </div>
                 <div class="content-buttom"> 
                     <div class="product">
+                        <div class="form-add-product">
+                            <h2 class="card-title ">Add Product</h2>
+                            <form>
+                              <div class="input-group">
+                                <label for="file">Product Image:</label>
+                                <input type="file" id="file" name="file">
+                                <img src="" alt="imge">
+                              </div>
+                              <div class="input-group">
+                                <label for="id">Product ID:</label>
+                                <input type="text" id="id" name="id" placeholder="Id start from ---001--" required>
+                              </div>
+                              <div class="input-group">
+                                <label for="name">Product Name:</label>
+                                <input type="text" id="name" name="name" required>
+                              </div>
+                              <div class="input-group">
+                                <label for="category">Category:</label>
+                                <input type="text" id="category" name="category" required>
+                              </div>
+                              <div class="input-group">
+                                <label for="quantity">Quantity:</label>
+                                <input type="number" id="quantity" name="quantity" required>
+                              </div>
+                              <div class="input-group">
+                                <label for="price">Price:</label>
+                                <input type="number" id="price" name="price" required>
+                              </div>
+                            </form>
+                            <div class="submit-cancel">
+                                <button  class="btn_cancel" onclick="hideForm()">cancel</button>
+                                <button  class="btn-submit" onclick="addToStock()">Add to stock</button>
+                            </div>
+                          </div>
                         <section class="head_item">
                             <div class="items">
-                                <button>Add Product</button>
+                                <button id="btn-add-products" onclick="toggleForm()">Add Product</button>
                                 <h4>Filter By All Categories:</h4>
                                 <select>
                                     <option value="drink">All Categories</option>
@@ -70,38 +103,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>001</td>
-                                <td>Broundsuger</td>
-                                <td>Drinks</td>
-                                <td>2</td>
-                                <td>2.00$</td>
-                                <td><img src="../images/icon/edit.svg" id="edit" alt="" > <img src="../images/icon/delete.png"
-                                    id="delete" alt=""> <img src="../images/icon/eye.png" id="show" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>002</td>
-                                <td>Cupcake</td>
-                                <td>Cakes</td>
-                                <td>2</td>
-                                <td>2.50$</td>
-                                <td><img src="../images/icon/edit.svg" id="edit" alt="" > <img src="../images/icon/delete.png"
-                                       id="delete" alt=""> <img src="../images/icon/eye.png" id="show" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>003</td>
-                                <td>Cheese</td>
-                                <td>Snacks</td>
-                                <td>3</td>
-                                <td>3.00$</td>
-                                <td><img src="../images/icon/edit.svg" id="edit" alt="" > <img src="../images/icon/delete.png"
-                                    id="delete" alt=""> <img src="../images/icon/eye.png" id="show" alt=""></td>
-                            </tr>
+                          <!-- code in javascript file -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </main>
     </div>
+    <script src="../js/products.js"></script>
 </body>
 </html>
