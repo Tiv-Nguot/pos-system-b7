@@ -62,9 +62,9 @@ function addToTable(productData) {
         <td>${productData.quantity}</td>
         <td>${productData.price}</td>
         <td>
-            <img id="edit" src="../images/icon/edit.svg" onclick="edit_product(event)">
+        <img id="edit" src="../images/icon/edit.svg" onclick="edit_product(event)">
             <img id="delete" src="../images/icon/delete.png" onclick="delete_product(event)">
-            <img id="show" src="../images/icon/eye.png" onclick="show_product(event)>
+            <img id="show" src="../images/icon/eye.png" onclick="show_product(event)">
         </td>
     `;
 
@@ -89,21 +89,21 @@ window.addEventListener('load', function () {
 
 
 // search_name_product
-function searchNameProduct(event){
-    let tr =event.target.value.toLowerCase()
-    let names= document.querySelectorAll('tbody tr')
-    for (const name of names){
-        let title =name.children[1].textContent.toLowerCase()
+function searchNameProduct(event) {
+    let tr = event.target.value.toLowerCase()
+    let names = document.querySelectorAll('tbody tr')
+    for (const name of names) {
+        let title = name.children[1].textContent.toLowerCase()
         name.textContent.toLowerCase()
-        if (title.includes(tr)){
-            name.style.display =''
-        }else{
-            name.style.display ='none'
+        if (title.includes(tr)) {
+            name.style.display = ''
+        } else {
+            name.style.display = 'none'
         }
     }
 }
-const searchs= document.querySelector('.search');
-searchs.addEventListener('keyup',searchNameProduct)
+const searchs = document.querySelector('.search');
+searchs.addEventListener('keyup', searchNameProduct)
 
 
 // -----------------------------------------------------------------------to delete
@@ -111,9 +111,13 @@ searchs.addEventListener('keyup',searchNameProduct)
 function delete_product(event) {
     let tr = event.target.closest('tr');
     let productId = tr.querySelector('td:first-child').textContent.substring(2);
+    let toConfirm = confirm("Are you sure to delete it?");
+    if (toConfirm == true) {
+        // Remove the product from the table
+        tr.remove();
+    }
 
-    // Remove the product from the table
-    tr.remove();
+
 
     // Remove the product from localStorage
     let savedProducts = JSON.parse(localStorage.getItem('products')) || [];
