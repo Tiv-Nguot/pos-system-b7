@@ -62,9 +62,9 @@ function addToTable(productData) {
         <td>${productData.quantity}</td>
         <td>${productData.price}</td>
         <td>
-            <img id="edit" src="../images/icon/edit.svg">
-            <img id="delete" src="../images/icon/delete.png">
-            <img id="show" src="../images/icon/eye.png">
+            <img id="edit" src="../images/icon/edit.svg" onclick="edit_product(event)">
+            <img id="delete" src="../images/icon/delete.png" onclick="delete_product(event)">
+            <img id="show" src="../images/icon/eye.png" onclick="show_product(event)>
         </td>
     `;
 
@@ -104,3 +104,21 @@ function searchNameProduct(event){
 }
 const searchs= document.querySelector('.search');
 searchs.addEventListener('keyup',searchNameProduct)
+
+
+// -----------------------------------------------------------------------to delete
+// Function to delete a product from the table and localStorage
+function delete_product(event) {
+    let tr = event.target.closest('tr');
+    let productId = tr.querySelector('td:first-child').textContent.substring(2);
+
+    // Remove the product from the table
+    tr.remove();
+
+    // Remove the product from localStorage
+    let savedProducts = JSON.parse(localStorage.getItem('products')) || [];
+    savedProducts = savedProducts.filter(product => product.id !== parseInt(productId));
+    localStorage.setItem('products', JSON.stringify(savedProducts));
+}
+
+// --------------------------------------------------------------------------------------
