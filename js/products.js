@@ -21,7 +21,7 @@ function addToStock() {
     let inputs = document.querySelectorAll('input');
 
     // Check if required inputs are filled
-    if (inputs[0].value === '' && inputs[1].value === '') {
+    if (inputs[2].value === '') {
         alert("Complete all inputs, please!");
         return false;
     }
@@ -32,7 +32,8 @@ function addToStock() {
         name: inputs[2].value,
         category: inputs[3].value,
         quantity: inputs[4].value,
-        price: `${inputs[5].value}$`
+        price: `${inputs[5].value}$`,
+        images: [localStorage.getItem('uploadedImage')] // Store image data in an array
     };
 
     // Save product data to localStorage
@@ -47,7 +48,11 @@ function addToStock() {
     for (let input of inputs) {
         input.value = '';
     }
+
+    // Reset the image to the default one
+    document.getElementById('image-product').src = "../images/draft.jpg";
 }
+
 
 // Add a product to the table
 function addToTable(productData) {
@@ -62,15 +67,16 @@ function addToTable(productData) {
         <td>${productData.quantity}</td>
         <td>${productData.price}</td>
         <td>
+            <div class="image-container"></div> <!-- Container for displaying images -->
             <img id="edit" src="../images/icon/edit.svg">
             <img id="delete" src="../images/icon/delete.png">
             <img id="show" src="../images/icon/eye.png">
         </td>
     `;
-
     // Append the row to the table
     tbody.appendChild(tr);
 }
+
 
 // Load data from localStorage on page load
 window.addEventListener('load', function () {
@@ -86,3 +92,43 @@ window.addEventListener('load', function () {
 });
 
 // ----------------------------------------------------------------------------------------------------
+
+// Get references to the file input and image elements
+const fileInput = document.getElementById('file');
+const imageProduct = document.getElementById('image-product');
+
+// Add event listeners for file input and cancel button
+fileInput.addEventListener('change', showImage);
+document.getElementById('cancel_image').addEventListener('click', cancelImage);
+
+// Function to handle file selection and display the image
+function showImage() {
+    const file = fileInput.files[0];
+    if (file) {
+        // Read the selected file as a data URL
+        const reader = new FileReader();
+        reader.onload = e => (imageProduct.src = e.target.result, saveToLocalStorage(e.target.result));
+        reader.readAsDataURL(file);
+    }
+}
+
+// Function to save image data to local storage
+function saveToLocalStorage(imageData) {
+    localStorage.setItem('uploadedImage', imageData);
+}
+
+// Function to cancel image selection
+function cancelImage() {
+    // Clear the file input and reset the image to the default one
+    fileInput.value = null;
+    imageProduct.src = "../images/draft.jpg";
+
+    // Clear the image data from local storage
+    localStorage.removeItem('uploadedImage');
+}
+
+// Check if there is a saved image in local storage and display it on page load
+window.onload = () => {
+    const savedImage = localStorage.getItem('uploadedImage');
+    if (savedImage) imageProduct.src = savedImage;
+};
