@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/payment_processing.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<script src="../js/payment_processing.js"></script>
+<title>order page</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-name">
+     <a href="../index.html"> <span class="material-symbols-outlined"> shopping_cart</span></a>
+    <a href="../index.html"><h5 class="company_name">POS SYSTEM </h5></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Invoice -->
+    <div class="invoice">
+      <!-- Location -->
+      <div class="location">
+        <p>Sola Street (371), Phnom Penh</p>
+      </div>
+      <!-- Table of products -->
+      <div>
+        <h2>Summary products:</h2><br>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Discount</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Product 1</td>
+            <td>2</td>
+            <td>0%</td>
+            <td>$10.00</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Product 2</td>
+            <td>1</td>
+            <td>0%</td>
+            <td>$20.00</td>
+          </tr>
+          <!-- Add more rows for additional products -->
+        </tbody>
+      </table>
+
+      <!-- Last total -->
+      <div class="total">
+        <p><strong>Total: $30.00</strong></p>
+      </div>
+
+      <!-- Charge button -->
+      <button class="print-button" onclick="window.print()" ondblclick="hide_btn()">Charge</button>
+
+
+      <!-- Thank you message -->
+      <div class="thank-you">
+        <p>We would like to express our sincere gratitude for your trust and confidence in us. Thank you for your
+          purchase and we look forward to serving you again in the future!</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
