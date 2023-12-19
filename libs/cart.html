@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="js/home.js" defer></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!-- ------------------------------------ Header  -->
+    <header>
+        <div class="logo-name">
+            <span class="material-symbols-outlined">
+                shopping_cart
+            </span>
+            <h5 class="company_name">POS SYSTEM</h5>
+        </div>
+        <!-- --------------------------------------search box -->
+        <!-- ------------------------------------------------- -->
+    </header>
+    <!-- ------------------------------------------------------ -->
+
+
+    <div class="container">
+        <!--  -------------------------------------------------- navbar-->
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/index.html"><span class="material-symbols-outlined">house</span> Home</a>
+                </li>
+                <li class="nav-item"><a href="/pages/products.html"><span
+                            class="material-symbols-outlined">order_approve</span>
+                        Product</a></li>
+                <li class="nav-item"><a href="/pages/story_solds.html"><span
+                            class="material-symbols-outlined">history</span>
+                        Story</a></li>
+            </ul>
+        </nav>
+        <!-- ---------------------------------------------------------------- -->
+        <main>
+            <div class="product-detail">
+                <h3>Product Detail:</h3>
+            </div>
+            <div class="cart">
+                <div class="cart-img">
+                    <div class="img" id="img">
+                        <img src="/images/coffee/liong jae.jpg" alt="">
+                    </div>
+                    <div id="Pro-cart" class="list-cart">
+                        <h3>____________Cart______________</h3>
+                        <p><strong>Name:</strong><span id="cardName">Corn Dog</span></p>
+                        <p><strong>Category:</strong> <span id="cardCategory">Food</span></p>
+                        <p><strong>Quantity:</strong><span id="cardQuantiy">10</span></p>
+                        <p><strong>Total Price:</strong><span id="cardPrice">$10</span></p>
+                    </div>
+                    <div class="btn">
+                        <button><a href="/index.html">Cancle</a></button>
+                        <button><a href="/pages/products.html">Edit</a></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
