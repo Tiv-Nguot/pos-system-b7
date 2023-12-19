@@ -21,7 +21,7 @@ function addToStock() {
     let inputs = document.querySelectorAll('input');
 
     // Check if required inputs are filled
-    if (inputs[0].value === '' && inputs[1].value === '') {
+    if (inputs[0].value === '' && inputs[1].value === '' && inputs[2].value === '') {
         alert("Complete all inputs, please!");
         return false;
     }
@@ -64,7 +64,7 @@ function addToTable(productData) {
         <td>
             <img id="edit" src="../images/icon/edit.svg" onclick="edit_product(event)">
             <img id="delete" src="../images/icon/delete.png" onclick="delete_product(event)">
-            <img id="show" src="../images/icon/eye.png" onclick="show_product(event)>
+            <img id="show" src="../images/icon/eye.png" onclick="show_product(event)">
         </td>
     `;
 
@@ -122,3 +122,5 @@ function delete_product(event) {
 }
 
 // --------------------------------------------------------------------------------------
+
+
