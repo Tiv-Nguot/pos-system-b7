@@ -86,3 +86,21 @@ window.addEventListener('load', function () {
 });
 
 // ----------------------------------------------------------------------------------------------------
+
+
+// search_name_product
+function searchNameProduct(event){
+    let tr =event.target.value.toLowerCase()
+    let names= document.querySelectorAll('tbody tr')
+    for (const name of names){
+        let title =name.children[1].textContent.toLowerCase()
+        name.textContent.toLowerCase()
+        if (title.includes(tr)){
+            name.style.display =''
+        }else{
+            name.style.display ='none'
+        }
+    }
+}
+const searchs= document.querySelector('.search');
+searchs.addEventListener('keyup',searchNameProduct)
