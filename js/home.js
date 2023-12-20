@@ -39,9 +39,7 @@ function createBox(productData) {
     borderCartDiv.className = 'border-cart';
 
     var h5Element = document.createElement('h5');
-    var aElement = document.createElement('a');
-    // aElement.href = '/libs/cart.html';
-    aElement.textContent = 'Add To Cart';
+    h5Element.textContent = 'Add To Cart';
 
     // Add click event listener to the anchor tag
 
@@ -65,7 +63,7 @@ function createBox(productData) {
 
     borderCartDiv.appendChild(h5Element);
     borderCartDiv.appendChild(spanElement);
-    h5Element.appendChild(aElement);
+    // h5Element.appendChild(aElement);
 
     borderCartDiv.addEventListener('click', saveTo_Array)
     function saveTo_Array() {
