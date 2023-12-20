@@ -74,6 +74,11 @@ h2{
     padding: 8px;
     border: 1px solid #ddd;
 }
+#delete_data{
+  width: 100px;
+  padding: 10px;
+  background: orange;
+}
 
 .total {
     text-align: right;

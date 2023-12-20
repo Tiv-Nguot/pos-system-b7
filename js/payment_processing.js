@@ -17,8 +17,6 @@ function createTr(data) {
     let categoryProduct = document.createElement('td');
     let dateSold = document.createElement('td');
     let priceProduct = document.createElement('td');
-    let btnDelete = document.createElement('button');
-
     idProduct.textContent = data.id;
     nameProduct.textContent = data.name;
     categoryProduct.textContent = data.category;
@@ -42,3 +40,4 @@ sell_Product.forEach((data) => {
 });
 
 totalElement.textContent = `Total: $${totalAmount.toFixed(2)}`;
+

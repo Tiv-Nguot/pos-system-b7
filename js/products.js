@@ -21,7 +21,7 @@ function addToStock() {
     let inputs = document.querySelectorAll('input');
 
     // Check if required inputs are filled
-    if (inputs[2].value === '' || inputs[3].value === '' || inputs[4].value === '' || inputs[5].value === '') {
+    if (inputs[2].value === '' || inputs[3].value === '' || inputs[4].value === ''){
         alert("Complete all inputs, please!");
         return false;
     }
