@@ -91,6 +91,23 @@ window.addEventListener('load', function () {
 });
 
 // ----------------------------------------------------------------------------------------------------
+// function click on categery
+function clickCategory(event){
+    let option = event.target.value.toLowerCase();
+    let categerys = document.querySelectorAll('tbody tr');
+    for (const categery of categerys){
+        let title= categery.children[2].textContent.toLowerCase();
+        categery.textContent.toLowerCase()
+        if (title.includes(option)){
+            categery.style.display=''
+        }else{
+            categery.style.display='none'
+        }
+    }
+    
+}
+let select = document.querySelector('select');
+select.addEventListener('click',clickCategory)
 
 
 // search_name_product
@@ -172,3 +189,6 @@ window.onload = () => {
     const savedImage = localStorage.getItem('uploadedImage');
     if (savedImage) imageProduct.src = savedImage;
 };
+const search= document.querySelector('.search');
+search.addEventListener('keyup',searchNameProduct)
+
