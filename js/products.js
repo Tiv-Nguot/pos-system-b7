@@ -70,7 +70,7 @@ function addToTable(productData) {
             <div class="image-container"></div> <!-- Container for displaying images -->
             <img id="edit" src="../images/icon/edit.svg">
             <img id="delete" src="../images/icon/delete.png">
-            <img id="show" src="../images/icon/eye.png">
+            <img id="show" src="../images/icon/eye.png"  onclick="showProduct(event)">
         </td>
     `;
     // Append the row to the table
@@ -132,3 +132,21 @@ window.onload = () => {
     const savedImage = localStorage.getItem('uploadedImage');
     if (savedImage) imageProduct.src = savedImage;
 };
+
+
+
+
+function showProduct(event){
+    let load=event.target.parentElement.parentElement;
+    
+    const productId =document.getElementById("id");
+    const nameProduct=document.getElementById("name");
+    const category=document.getElementById("category");
+    const quantity=document.getElementById("quantity");
+    const price=document.getElementById("price");
+    productId.textContent="ID :"+load.children[0].textContent;
+    nameProduct.textContent= "Name Product: "+load.children[1].textContent;
+    category.textContent= "Category: "+load.children[2].textContent;
+    quantity.textContent= "Quantity: "+load.children[3].textContent;
+    price.textContent="Price: "+load.children[4].textContent;
+}

@@ -216,8 +216,8 @@ button.btn-add:hover {
   background-color: white;
   width: 35%;
   border-radius: 4px;
-  margin-right: 5px;
-  align-self: flex-end;
+  position: absolute;
+  top: 500px;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.473);
 }
 
