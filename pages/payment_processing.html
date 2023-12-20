@@ -16,10 +16,12 @@
   <header>
     <div class="logo-name">
       <a href="../index.html"> <span class="material-symbols-outlined"> shopping_cart</span></a>
-      <a href="../index.html"><h5 class="company_name">POS SYSTEM </h5></a>
+      <a href="../index.html">
+        <h5 class="company_name">POS SYSTEM </h5>
+      </a>
     </div>
   </header>
-  
+
   <div class="container">
     <!-- Invoice -->
     <div class="invoice">
@@ -49,29 +51,30 @@
             <td>2</td>
             <td></td>
             <td>$10.00</td>
+            <td><button id="btnDelete" onclick="delete_order()">Delete</button></td>
           </tr>
           <!-- Add more rows for additional products -->
         </tbody>
       </table>
-      
+
       <!-- Last total -->
       <div class="total">
         <p><strong id="total">Total: $30.00</strong></p>
       </div>
-      
+
       <!-- Charge button -->
-      <button class="print-button"  ondblclick="hide_btn()">Charge</button>
-      
-      
+      <button class="print-button" ondblclick="hide_btn()">Charge</button>
+
+
       <!-- Thank you message -->
       <div class="thank-you">
         <p>We would like to express our sincere gratitude for your trust and confidence in us. Thank you for your
           purchase and we look forward to serving you again in the future!</p>
-        </div>
       </div>
     </div>
-    
-    <script src="../js/payment_processing.js" defer></script>
-  </body>
-  
-  </html>
+  </div>
+
+  <script src="../js/payment_processing.js" defer></script>
+</body>
+
+</html>

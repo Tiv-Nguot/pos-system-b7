@@ -1,102 +1,118 @@
 * {
-    margin: 0;
-    padding: 0;
-  }
-  title{
-    display: none;
-  }
-  body{
-    background: #D9D9D9;
-  }
-  header {
-    padding: 10px;
-    background: #06181d;
-    justify-items: center;
-    align-items: center;
-  }
-  
-  .logo-name {
-    width: 13%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 25px;
-    align-items: center;
-  }
-  
-  a{
-    color: white;
-    text-decoration: none;
-  }
-  a:hover{
+  margin: 0;
+  padding: 0;
+}
 
-  }
-  .logo-name .material-symbols-outlined {
-    font-size: 40px;
-  }
+title {
+  display: none;
+}
+
+body {
+  background: #D9D9D9;
+}
+
+header {
+  padding: 10px;
+  background: #06181d;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo-name {
+  width: 13%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 25px;
+  align-items: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {}
+
+.logo-name .material-symbols-outlined {
+  font-size: 40px;
+}
 
 
 /* CSS styles for the invoice */
 
 .invoice {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
 }
 
 .company-logo {
-    max-width: 200px;
-    margin-bottom: 10px;
+  max-width: 200px;
+  margin-bottom: 10px;
 }
 
 .location {
-    margin-bottom: 10px;
-    color: rgb(238, 20, 78);
-    font-size: 12px;
+  margin-bottom: 10px;
+  color: rgb(238, 20, 78);
+  font-size: 12px;
 }
-.location::before{
-    content: "Location: ";
-    font-weight: bold;
-    color: #502808;
+
+.location::before {
+  content: "Location: ";
+  font-weight: bold;
+  color: #502808;
 }
-h2{
-    padding: 20px 0px 1px 0px;
+
+h2 {
+  padding: 20px 0px 1px 0px;
 }
 
 .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
 
 .table th,
 .table td {
-    padding: 8px;
-    border: 1px solid #ddd;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+#btnDelete {
+  width: 70px;
+  background: orange;
+  padding: 7px;
+  border: none;
+  cursor: pointer;
 }
 
 .total {
-    text-align: right;
-    margin-bottom: 20px;
+  text-align: right;
+  margin-bottom: 20px;
 }
+
 .print-button {
-    background-color: #4CAF50;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    /* need to change responsive */
-    margin-left: 89%;
+  background-color: #4CAF50;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  /* need to change responsive */
+  margin-left: 89%;
 }
 
 .print-button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
-.thank-you{
-    width: 60%;
-    text-align: left;
+
+.thank-you {
+  width: 60%;
+  text-align: left;
 }
-.thank-you p{
-    color: rgb(28, 25, 25);
+
+.thank-you p {
+  color: rgb(28, 25, 25);
 }
