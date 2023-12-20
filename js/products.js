@@ -67,9 +67,8 @@ function addToTable(productData) {
         <td>${productData.quantity}</td>
         <td>${productData.price}</td>
         <td>
-        <img id="edit" src="../images/icon/edit.svg" onclick="edit_product(event)">
             <img id="delete" src="../images/icon/delete.png" onclick="delete_product(event)">
-            <img id="show" src="../images/icon/eye.png" onclick="show_product(event)">
+            <img id="show" src="../images/icon/eye.png"  onclick="showProduct(event)">
         </td>
     `;
     // Append the row to the table
@@ -192,3 +191,24 @@ window.onload = () => {
 const search= document.querySelector('.search');
 search.addEventListener('keyup',searchNameProduct)
 
+    if (savedImage) imageProduct.src = savedImage;
+
+
+
+
+
+
+function showProduct(event){
+    let load=event.target.parentElement.parentElement;
+    
+    const productId =document.getElementById("id");
+    const nameProduct=document.getElementById("name");
+    const category=document.getElementById("category");
+    const quantity=document.getElementById("quantity");
+    const price=document.getElementById("price");
+    productId.textContent="ID :"+load.children[0].textContent;
+    nameProduct.textContent= "Name Product: "+load.children[1].textContent;
+    category.textContent= "Category: "+load.children[2].textContent;
+    quantity.textContent= "Quantity: "+load.children[3].textContent;
+    price.textContent="Price: "+load.children[4].textContent;
+}
