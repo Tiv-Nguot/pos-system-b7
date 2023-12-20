@@ -29,10 +29,10 @@ function addToStock() {
     // Create product data object
     let productData = {
         id: id_product++,
-        name: inputs[2].value,
-        category: inputs[3].value,
-        quantity: inputs[4].value,
-        price: `${inputs[5].value}$`,
+        name: inputs[1].value,
+        category: inputs[2].value,
+        quantity: inputs[3].value,
+        price: `${inputs[4].value}$`,
         images: [localStorage.getItem('uploadedImage')] // Store image data in an array
     };
 
@@ -187,7 +187,7 @@ function cancelImage() {
 // Check if there is a saved image in local storage and display it on page load
 window.onload = () => {
     const savedImage = localStorage.getItem('uploadedImage');
-    if (savedImage) imageProduct.src = savedImage;
+    if (savedImage) imageProduct.src = "../images/draft.jpg";
 };
 const search= document.querySelector('.search');
 search.addEventListener('keyup',searchNameProduct)
